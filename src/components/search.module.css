@@ -1,0 +1,38 @@
+.Search {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* gap: 5rem */
+}
+
+.Search input {
+    padding: 1.5rem;
+    outline: none;
+    border: none;
+    border-radius: 12px;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    font-size: 20px;
+}
+
+.Search button {
+    border-radius: 12px;
+    padding: 1.7rem;
+    outline: none;
+    border: none;
+    background-color: black;
+    color: white;
+    border-top-left-radius: 0%;
+    border-bottom-left-radius: 0%;
+    font-size: 15px;
+}
+
+.Search input::placeholder {
+    font-size: 20px;
+}
+
+.Search button:active,
+button:hover {
+    background-color: rgb(39, 36, 36);
+    cursor: pointer;
+}
