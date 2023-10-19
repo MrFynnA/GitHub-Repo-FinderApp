@@ -15,7 +15,7 @@ const Search=(props)=>{
     <form onSubmit={handleSubmit((data)=>{
       addUserName(data.username)    
       fetchData()
-    })} className={`${styles.Search}  mt-10 max-md:mt-14`}>
+    })} className={`${styles.Search}  mt-10`}>
  <input {...register('username')} id='username' type='text' className='max-md:w-[55%] max-md:!text-sm max-md:!pl-4 max-md:!py-4 max-md:placeholder:!text-[1rem]' placeholder='Enter Username'/>
  <button className='max-md:w-[26%] max-md:text-sm max-md:!px-1 max-md:!py-4'>{props.buttonText}</button>
  </form>

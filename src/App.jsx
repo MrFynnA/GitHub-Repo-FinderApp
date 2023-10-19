@@ -75,11 +75,16 @@ const fetchData=useCallback(()=>{
             if(data && data.length===0 && username.length===0){
                 message=''
             }
+
+       let repoMessage='List Your Github Repositories' 
+       if(data && data.length>0){
+        repoMessage='Your Github Repositories'
+       }
     return (
 <Fragment>
     <Header/>
     <Search buttonText='List Repos' fetchData={fetchData}/>
-    <div className={`${classes.title} mt-6 italic text-center font-bold text-2xl max-md:text-xl`}>List Your Github Repositories</div>
+    <div className={`${classes.title} mt-6 italic text-center font-bold text-2xl max-md:text-xl`}>{repoMessage}</div>
 {message}
 <Footer data={data}/>
       </Fragment>
