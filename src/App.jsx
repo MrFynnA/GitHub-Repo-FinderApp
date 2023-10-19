@@ -46,14 +46,15 @@ const fetchData=useCallback(()=>{
         
         )
     }
-
+    
 },[username])
+// console.log(error)
 
 
     useEffect(()=>{
         fetchData()     
     },[fetchData])
-    console.log(error)
+    // console.log(error)
               
     let message;
 

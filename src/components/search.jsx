@@ -2,12 +2,23 @@ import React,{Fragment,useState} from 'react'
 import styles from './search.module.css'
 import { useForm } from 'react-hook-form'
 import { useStore } from './Store/zstore'
+import { useEffect } from 'react'
+import useHttps from './useHttps'
+import { useCallback } from 'react'
 
 const Search=(props)=>{
-    const[userName,setUsername]=useState('')
+    // const[userName,setUsername]=useState('')
     const addUserName=useStore(store=>store.addUserName)
-    const {register,handleSubmit} =useForm()
+    const {register,handleSubmit,watch} =useForm()
     const{fetchData}=props
+    // const username=watch('username')
+    // const applData=useCallback((data)=>{
+    //       console.log(data)
+    // },[])
+    // const{Request:userNameRequest}=useHttps(applData)
+// useEffect(()=>{
+//   userNameRequest({url:`https://api.github.com/users/${username}/repos`})
+// },[username,userNameRequest])
 
  return (
 <Fragment>

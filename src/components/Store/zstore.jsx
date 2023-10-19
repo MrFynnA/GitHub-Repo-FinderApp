@@ -3,7 +3,7 @@ import { create } from "zustand"
 const store=(set)=>({
   searchInput:'',
   addUserName:(searchValue)=>{
-    console.log(searchValue)
+    // console.log(searchValue)
     set({searchInput:searchValue})
 }
     
