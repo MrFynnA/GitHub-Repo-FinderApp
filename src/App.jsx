@@ -9,33 +9,11 @@ import Footer from './components/Footer'
 import reactdom from 'react-dom'
 function App() {
 const[data,setData]=useState([
-    {
-        id:'1',
-        name:"fank",
-        html_url:'https/baaaaaaaaaaaaaaaaaaaaaaaaaa'
-    },
-    {
-        id:'1',
-        name:"fank",
-        html_url:'https/baaaaaaaaaaaaaaaaaaaaaaaaaa'
-    },
-    {
-        id:'1',
-        name:"fank",
-        html_url:'https/baaaaaaaaaaaaaaaaaaaaaaaaaa'
-    },
-    {
-        id:'1',
-        name:"fank",
-        html_url:'https/baaaaaaaaaaaaaaaaaaaaaaaaaa'
-    },
-    {
-        id:'1',
-        name:"fank",
-        html_url:'https/baaaaaaaaaaaaaaaaaaaaaaaaaa'
-    },
+    {},
+    {},
+    {},
 ])
-const[userName,setUsername]=useState('mojombo')
+const[userName,setUsername]=useState('')
 const[loading,setIsloading]=useState(false)
 const[error,setError]=useState(false)
 // const[userName,setUsername]=useState('mojombo')
@@ -75,7 +53,7 @@ const[error,setError]=useState(false)
 setUsername(user)
 console.log()
     }
-            let message=<FallbackMessage message={'Oops No Repositories Available. Try searching again?'}/>
+            let message=<FallbackMessage message={'Oops No Repositories Available for this user. Try searching again?'}/>
 
             if(error){
                 message=<FallbackMessage message={'Failed to get data, Please check internet connection'}/>
@@ -84,13 +62,17 @@ console.log()
             if(data.length>0){
                 message=<GitRepoList data={data}/>
             }
+
+            if(data.length===0 && userName.length===0){
+                message=''
+            }
     return (
 <Fragment>
     <Header/>
     <Search buttonText='List Repos' getRepo={getRepo}/>
     <div className={`${classes.title} mt-6 italic text-center font-bold text-2xl max-md:text-xl`}>List Your Github Repositories</div>
 {message}
-<Footer/>
+<Footer data={data}/>
       </Fragment>
     );
 
