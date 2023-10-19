@@ -88,7 +88,7 @@ console.log()
 <Fragment>
     <Header/>
     <Search buttonText='List Repos' getRepo={getRepo}/>
-    <h1 className={`${classes.title} mt-4 italic`}>List Your Github Repositories</h1>
+    <div className={`${classes.title} mt-6 italic text-center font-bold text-2xl max-md:text-xl`}>List Your Github Repositories</div>
 {message}
 <Footer/>
       </Fragment>
