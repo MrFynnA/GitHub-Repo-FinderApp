@@ -13,7 +13,7 @@ const GitHubRepos=(props)=>{
         </div>
         <MygitSvg/>
         </header>
-        <div className='flex flex-col pl-4 gap-3 mt-2 text-[azure]  font-[Trebuchet_MS]'>
+        <div className='flex flex-col px-4 gap-3 mt-2 text-[azure]  font-[Trebuchet_MS] break-words'>
         <h2 className='text-white font-bold text-lg'>Repository</h2>
         <a className={`${styles.contentTitle}`} href={props.link} target='_blank' rel="noreferrer">{props.link}</a>
         </div>
